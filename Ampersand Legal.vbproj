@@ -172,7 +172,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -195,6 +194,8 @@
     <Content Include="Content\Images\family-law.jpg" />
     <Content Include="Content\Images\law-firm-hero.jpg" />
     <Content Include="Content\Images\law-books.jpg" />
+    <Content Include="Content\Images\Logo.jpeg" />
+    <Content Include="Content\Images\Logo1.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

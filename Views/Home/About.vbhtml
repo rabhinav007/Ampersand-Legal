@@ -2,9 +2,9 @@
     ViewData("Title") = "About Ampersand Legal"
 End Code
 
-<section class="about-section" style="padding: 60px 20px; max-width: 900px; margin: auto;">
+<section class="about-section" style="padding: 60px 20px; max-width: 900px;margin: auto;">
     <div class="container">
-        <h1>About Ampersand Legal</h1>
+        <h1 style="color: #a68a64;">About Ampersand Legal</h1>
 
         <p>
             Ampersand Legal’s objective is to offer a simplified solution to legal services in established areas of law as well as in emerging fields. The firm strives to offer comprehensive yet tailored solutions to its clients, equipped with meticulous research and ingenious methodology.
@@ -15,11 +15,12 @@ End Code
         </p>
 
         <p style="margin-top: 40px;">
-            <a href="@Url.Action("Index", "Contact")" class="btn-primary" style="padding: 10px 20px; border-radius: 5px; text-decoration: none; color: white; background-color: #007bff;">
-                Contact us today
+            <a href="@Url.Action("Index", "Contact")" class="contact-link">
+                contact us 
             </a>
             to schedule a consultation and learn how Ampersand Legal can assist you.
         </p>
+
 
     </div>
 </section>
