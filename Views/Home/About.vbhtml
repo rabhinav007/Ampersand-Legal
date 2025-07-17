@@ -1,10 +1,14 @@
 ﻿@Code
     ViewData("Title") = "About Ampersand Legal"
 End Code
-
-<section class="about-section" style="padding: 60px 20px; max-width: 900px;margin: auto;">
+<style>
+    body {
+        background-color: #f8f8f8 !important;
+    }
+    </style>
+<section class="about-section" style="padding: 60px 20px; background-color: #f8f8f8; max-width: 900px; margin: auto;">
     <div class="container">
-        <h1 style="color: #a68a64;">About Ampersand Legal</h1>
+        <h1 style="text-align: center; margin-bottom: 30px;color: #a68a64; font-weight: 700;">About Ampersand Legal</h1>
 
         <p>
             Ampersand Legal’s objective is to offer a simplified solution to legal services in established areas of law as well as in emerging fields. The firm strives to offer comprehensive yet tailored solutions to its clients, equipped with meticulous research and ingenious methodology.
@@ -16,14 +20,32 @@ End Code
 
         <p style="margin-top: 40px;">
             <a href="@Url.Action("Index", "Contact")" class="contact-link">
-                contact us 
+                contact us
             </a>
             to schedule a consultation and learn how Ampersand Legal can assist you.
         </p>
 
 
     </div>
+
+    @*<div style="background-color: #f4f1ea; color: #3b3b3b; padding: 70px 0 60px 0; font-family: 'Georgia', serif;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 48px; font-family: 'Yeseva One', serif; font-weight: 700;">
+                About Ampersand Legal
+            </h2>
+            <p>
+                Ampersand Legal’s objective is to offer a simplified solution to legal services in established areas of law as well as in emerging fields. The firm strives to offer comprehensive yet tailored solutions to its clients, equipped with meticulous research and ingenious methodology.
+            </p>
+
+            <p>
+                The firm’s endeavour is to assist in bridging the gap between the requirement of the client and the desired result through a holistic, transparent, and cost-effective mechanism.
+            </p>
+        </div>
+    </div>*@
+
 </section>
+
+
 
 
 

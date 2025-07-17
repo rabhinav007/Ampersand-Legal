@@ -8,13 +8,12 @@ End Code
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewData("Title") - Ampersand Legal</title>
-
     <link rel="stylesheet" href="~/Content/site.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
         .navbar-custom {
-            background-color: #2c2c2c;
+            background-color: /*#2c2c2c; */#737373;
         }
 
             .navbar-custom .navbar-brand,
@@ -33,14 +32,24 @@ End Code
             color: #d4af37;
         }
 
-        .nav-link.active {
-            font-weight: bold;
-            color: #d4af37 !important;
+        .nav-link.dynamic-color {
+            transition: color 0.3s ease;
         }
+
+            .nav-link.dynamic-color:hover,
+            .nav-link.dynamic-color:focus {
+                color: #a68a64 !important;
+                text-decoration: none;
+            }
+
+            .nav-link.dynamic-color.active,
+            .nav-link.active {
+                font-weight: 600;
+                color: #a68a64 !important;
+            }
 
         .btn {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block;
             text-align: center;
             text-decoration: none;
         }
@@ -49,7 +58,6 @@ End Code
                 transform: scale(1.05);
                 box-shadow: 0 4px 12px rgba(166, 138, 100, 0.4);
             }
-
 
         .hover-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -64,13 +72,11 @@ End Code
                 z-index: 1;
             }
 
-
         .section-heading {
             background-color: #a68a64;
             border-left: 5px solid #007bff;
             padding: 10px 20px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin: 40px 0 20px;
             font-weight: bold;
             font-size: 1.5rem;
         }
@@ -112,7 +118,7 @@ End Code
             }
 
         footer.custom-footer {
-            background-color: #2c2c2c;
+            background-color: /*#2c2c2c;*/ #737373;
             color: #f5f5f5;
             padding: 40px 0;
             font-size: 15px;
@@ -129,13 +135,6 @@ End Code
                     color: #f7d87c;
                 }
 
-            footer.custom-footer .logo-placeholder {
-                width: 100px;
-                height: 50px;
-                background-color: white;
-                border-radius: 8px;
-            }
-
             footer.custom-footer .contact-info p {
                 margin-bottom: 8px;
             }
@@ -151,18 +150,6 @@ End Code
                 fill: #d4af37;
             }
 
-        
-        .practice-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .practice-card:hover {
-            transform: scale(1.35);
-            box-shadow: 0 4px 16px #a68a64;
-            z-index: 1;
-            position: relative;
-        }
-
         .contact-link {
             text-decoration: underline;
             color: #a68a64;
@@ -176,28 +163,11 @@ End Code
                 transform: scale(1.10);
                 text-shadow: 0 1px 4px rgba(166, 138, 100, 0.4);
             }
-    
-
 
         .content {
             padding-top: 0 !important;
             margin-top: 0 !important;
         }
-
-        #cookieConsent {
-            background: #2c2c2c;
-        }
-
-        #acceptCookies {
-            background-color: #d4af37;
-            border: none;
-            color: white;
-        }
-
-            #acceptCookies:hover {
-                background-color: #f1cc66;
-                color: #2c2c2c;
-            }
 
         #acceptDisclaimer {
             background-color: #d4af37;
@@ -209,17 +179,93 @@ End Code
                 background-color: #f1cc66;
                 color: #2c2c2c;
             }
+
+        .logo-placeholder {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-3d {
+            height: 50px;
+            margin-bottom: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: perspective(500px) rotateX(3deg);
+            border-radius: 8px;
+            background-color: white;
+            padding: 5px;
+            transition: all 0.3s ease;
+        }
+
+            .logo-3d:hover {
+                transform: perspective(500px) rotateX(0deg) scale(1.05);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            }
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .hover-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+            }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                transform: scale(1.1);
+            }
+
+            .whatsapp-float img {
+                width: 20px;
+                height: 20px;
+            }
+
+
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
-                <a class="navbar-brand d-flex flex-column align-items-start text-decoration-none" href="@Url.Action("Index", "Home")">
-                    <img src="~/Content/images/Logo.jpg" alt="Ampersand Legal Logo" style="height: 50px; margin-bottom: 4px;" />
-                    <span style="color: white;">ampersand legal</span>
+                @*<a class="navbar-brand d-flex flex-column align-items-start text-decoration-none" href="@Url.Action("Index", "Home")">
+            <img id="site-logo" alt="Ampersand Legal Logo" style="height: 60px; width: 130px" />
+            <span id="site-name" class="brand-name">ampersand legal<br><h6>advocates since 1970</h6></span>
+        </a>*@
+                <a class="navbar-brand d-flex flex-column align-items-center text-decoration-none"
+                   href="@Url.Action("Index", "Home")" style="line-height: 1;">
+
+                    <!-- Logo -->
+                    <img id="site-logo" alt="Ampersand Legal Logo" style="height: 60px; width: 130px; margin-bottom: 4px;" />
+
+                    <!-- Brand Name -->
+                    <span id="site-name" class="brand-name"
+                          style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0;">
+                        <h2>ampersand legal</h2>
+                    </span>
+
+                    <!-- Tagline -->
+                    <span id="site-tagline" class="tagline"
+                          style="font-size: 0.75rem; margin-top: 0;">
+                        <h6>advocates since 1970</h6>
+                    </span>
                 </a>
-                @*<p style="font-size: 20px; font-style: italic; text-decoration: underline; color: #59554c;">advocates since 1970</p>*@
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
@@ -227,16 +273,19 @@ End Code
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link @(If(ViewContext.RouteData.Values("controller").ToString() = "Home" AndAlso ViewContext.RouteData.Values("action").ToString() = "About", "active", ""))" href="@Url.Action("About", "Home")">about</a>
+                            <a class="nav-link dynamic-color @(If(ViewContext.RouteData.Values("controller").ToString() = "Home" AndAlso ViewContext.RouteData.Values("action").ToString() = "About", "active", ""))" href="@Url.Action("About", "Home")">about</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(If(ViewContext.RouteData.Values("controller").ToString() = "PracticeAreas", "active", ""))" href="@Url.Action("Index", "PracticeAreas")">practice areas</a>
+                            <a class="nav-link dynamic-color @(If(ViewContext.RouteData.Values("controller").ToString() = "PracticeAreas", "active", ""))" href="@Url.Action("Index", "PracticeAreas")">expertise</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(If(ViewContext.RouteData.Values("controller").ToString() = "Attorneys", "active", ""))" href="@Url.Action("Index", "Attorneys")">team</a>
+                            <a class="nav-link dynamic-color @(If(ViewContext.RouteData.Values("controller").ToString() = "Attorneys", "active", ""))" href="@Url.Action("Index", "Attorneys")">people</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(If(ViewContext.RouteData.Values("controller").ToString() = "Contact", "active", ""))" href="@Url.Action("Index", "Contact")">contact us</a>
+                            <a class="nav-link dynamic-color @(If(ViewContext.RouteData.Values("controller").ToString() = "Blogs", "active", ""))" href="@Url.Action("Index", "Blogs")">blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dynamic-color  @(If(ViewContext.RouteData.Values("controller").ToString() = "Contact", "active", ""))" href="@Url.Action("Index", "Contact")">contact us</a>
                         </li>
                     </ul>
                 </div>
@@ -252,14 +301,38 @@ End Code
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-md-4 mb-3 d-flex flex-column align-items-center">
-                    <div class="logo-placeholder">
-                        <img src="~/Content/images/Logo.jpg" alt="Ampersand Legal" style="max-width: 100px;" />
+                    <img id="footer-logo" src="/Content/Images/LogoBlack.png"
+                         alt="Ampersand Legal Footer Logo"
+                         style="max-width: 130px; margin: 0; padding: 0; border: none; background: transparent;" />
+
+                    <div class="d-flex align-items-center" style="gap: 15px; margin-top: 10px;">
+                        <!-- LinkedIn -->
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/ampersandlegal-in/?viewAsMember=true"
+                           target="_blank"
+                           style="display: inline-block;">
+                            <img src="~/Content/Images/linkedin.png"
+                                 alt="LinkedIn"
+                                 width="32"
+                                 height="32"
+                                 style="display: block;" />
+                        </a>
+
+
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/917428840218"
+                           target="_blank"
+                           aria-label="Chat on WhatsApp">
+                            <img src="~/Content/Images/whatsapp.png"
+                                 alt="Chat on WhatsApp"
+                                  width="32"
+                                 height="32"
+                                 style="display: block;" />
+                        </a>
                     </div>
-                    <a href="https://www.linkedin.com/in/abhinav0199" target="_blank" style="margin-top: 10px; color: #0077B5;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.325 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.207c.837 0 1.355-.554 1.355-1.247-.015-.71-.518-1.246-1.34-1.246-.822 0-1.355.536-1.355 1.246 0 .693.518 1.247 1.327 1.247h.013zm4.908 8.207V9.359c0-.21.015-.42.078-.57.171-.42.563-.854 1.221-.854.862 0 1.207.645 1.207 1.59v3.87h2.4V9.25c0-2.22-1.183-3.252-2.765-3.252-1.276 0-1.845.7-2.165 1.193v.025h-.015a5.15 5.15 0 0 1 .015-.025V6.169h-2.4c.03.67 0 7.225 0 7.225h2.4z" />
-                        </svg>
-                    </a>
+
+
                 </div>
 
                 <div class="col-md-5 mb-3 contact-info">
@@ -270,11 +343,12 @@ End Code
 
                 <div class="col-md-3 mb-3 text-md-end text-start">
                     <div class="mb-2">
-                        <a href="@Url.Action("Index", "Home")">home</a><br />
-                        <a href="@Url.Action("About", "Home")">about</a><br />
-                        <a href="@Url.Action("Index", "PracticeAreas")">practice areas</a><br />
-                        <a href="@Url.Action("Index", "Attorneys")">team</a><br />
-                        <a href="@Url.Action("Index", "Contact")">contact</a>
+                        @*<a href="@Url.Action("Index", "Home")">home</a><br />*@
+                        <a href="@Url.Action("About", "Home")" ; style="color:white;">about</a><br />
+                        <a href="@Url.Action("Index", "PracticeAreas")" ; style="color:white;">expertise</a><br />
+                        <a href="@Url.Action("Index", "Attorneys")" ; style="color:white;">people</a><br />
+                        <a href="@Url.Action("Index", "Blogs")" ; style="color:white;">blogs</a><br />
+                        <a href="@Url.Action("Index", "Contact")" ; style="color:white;">contact</a>
                     </div>
                 </div>
             </div>
@@ -296,7 +370,7 @@ End Code
     <div id="disclaimerModal" style="display:none; position: fixed; z-index: 9999; top:0; left:0; width:100%; height:100%; background: rgba(255,255,255,0.95); color: #333; padding: 40px; overflow-y: auto;">
         <div style="max-width: 800px; margin: auto; background: #f9f6f2; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
             <h2 style="text-align: center; color: #6c584c; font-family: 'Yeseva One', serif;">Disclaimer</h2>
-            
+
             <p style="font-size: 14px; line-height: 1.7; color: #444;">
                 This website is designed solely for the dissemination of basic information about Ampersand Legal. This information is available on the internet, various public platforms, and social media. We have taken care to ensure that the information provided is accurate and up-to-date. However, Ampersand Legal is not responsible for any reliance placed on this information. We will not be liable for any loss or damage caused due to any inaccuracy, exclusion of information, or its interpretation. Readers are advised to verify the information from independent and expert sources.
             </p>
@@ -306,7 +380,7 @@ End Code
             <p style="font-size: 14px; line-height: 1.7; color: #444;">
                 Ampersand Legal advises against using the communication platform provided on this website for the exchange of confidential, business, or politically sensitive information. Users are requested to use their judgment and exchange any such information solely at their own risk.
             </p>
-            
+
             <div style="text-align: center; margin-top: 30px;">
                 <button id="acceptDisclaimer" style="padding: 10px 30px; font-size: 16px; background-color: #4a4a4a; border: none; border-radius: 5px; color: white; margin-right: 20px;">
                     Accept
@@ -321,24 +395,68 @@ End Code
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Disclaimer Modal Script -->
-    <script>
-        window.onload = function () {
-            try {
-                var modal = document.getElementById("disclaimerModal");
-                var acceptBtn = document.getElementById("acceptDisclaimer");
 
-                if (!localStorage.getItem("disclaimerAccepted") && modal && acceptBtn) {
-                    modal.style.display = "block";
-                    acceptBtn.onclick = function () {
-                        localStorage.setItem("disclaimerAccepted", "true");
-                        modal.style.display = "none";
-                    };
-                }
-            } catch (err) {
-                console.error("Disclaimer Modal Error:", err);
+    <script>
+        function updateLogosBasedOnNavbar() {
+            const navbar = document.querySelector(".navbar");
+            const logo = document.getElementById("site-logo");
+            const footerLogo = document.getElementById("footer-logo");
+            const brandName = document.getElementById("site-name");
+            const navLinks = document.querySelectorAll(".nav-link.dynamic-color");
+
+            if (!navbar) return;
+
+            const bgColor = window.getComputedStyle(navbar).backgroundColor;
+            const rgbMatch = bgColor.match(/\d+/g);
+            if (!rgbMatch) return;
+
+            const rgb = rgbMatch.map(Number);
+            const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+            const isDark = brightness < 128;
+
+            const logoSrc = isDark
+                ? "/Content/Images/LogoWhite.png"
+                : "/Content/Images/LogoBlack.png";
+
+            if (logo) logo.src = logoSrc;
+            if (footerLogo) footerLogo.src = logoSrc;
+
+            const textColor = isDark ? "#ffffff" : "#000000";
+            if (brandName) brandName.style.color = textColor;
+            navLinks.forEach(link => link.style.color = textColor);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            updateLogosBasedOnNavbar();
+            setTimeout(updateLogosBasedOnNavbar, 500); // In case footer/logo loads late
+        });
+
+        // Optional: Live theme detection (if you want to handle system theme changes too)
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogosBasedOnNavbar);
+        }
+
+        // disclaimer 
+        window.onload = function () {
+            const modal = document.getElementById("disclaimerModal");
+            const acceptBtn = document.getElementById("acceptDisclaimer");
+
+            if (!localStorage.getItem("disclaimerAccepted") && modal) {
+                modal.style.display = "block";
+            }
+
+            if (acceptBtn) {
+                acceptBtn.onclick = function () {
+                    localStorage.setItem("disclaimerAccepted", "true");
+                    modal.style.display = "none";
+                };
             }
         };
     </script>
+
+
+
+
+
 </body>
 </html>

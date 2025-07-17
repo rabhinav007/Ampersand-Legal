@@ -2,25 +2,64 @@
     ViewBag.Title = "Contact Us"
 End Code
 
-<section class="contact-section" style="padding: 40px 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: auto;">
-    <div class="container">
-        <h1 style="text-align: center; margin-bottom: 30px;color: #a68a64; font-weight: 700;">contact us</h1>
+<style>
+    body {
+        background-color: #f8f8f8/*#f4f1ea*/ !important;
+    }
+</style>
+<section class="contact-section" style="padding: 40px 20px; background-color: #f8f8f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: auto;">
+    <div class="container" ; style="background-color: #f8f8f8;">
+        <h1 style="text-align: center; margin-bottom: 30px;color: #a68a64; font-weight: 700;">Contact Us</h1>
 
         <div class="contact-details" style="margin-bottom: 40px;">
             <h5>For all physical correspondence:</h5>
-            <address style="font-style: normal; line-height: 1.6; color: #333;">
-                @*<strong>New Delhi Office</strong><br />*@
-                A - 47, Kailash Colony,<br />
-                New Delhi - 110048, India
-            </address>
+            <!-- Make sure Font Awesome is included -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-            <h5>For general queries:</h5>
-            <p>Email: <a href="mailto:support@ampersandlegal.in" style="color: #004aad; text-decoration: none;">support@ampersandlegal.in</a></p>
-            <p>Phone: <a href="tel:+911145272735" style="color: #004aad; text-decoration: none;">+91 11 45 272 735</a></p>
-            <p>Phone: <a href="tel:+917428840218" style="color: #004aad; text-decoration: none;">+91 74288 40218</a></p>
+            <p>
+                <i class="fas fa-map-marker-alt" style="color: #a68a64; margin-right: 8px;"></i>
+                <span style="color: #004aad;">
+                    A - 47, Kailash Colony,<br />
+                      New Delhi - 110048, India
+                </span>
+            </p>
+
+
+            <h5>For general queries:</h5>           
+            <!-- Make sure to include Font Awesome in your <head> -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <!-- Contact Info with Icons -->
+            <div style="margin-top: 20px;">
+                <p>
+                    <i class="fas fa-envelope" style="color: #a68a64; margin-right: 8px;"></i>
+                    <a href="mailto:support@ampersandlegal.in" style="color: #004aad; text-decoration: none;">
+                        support@ampersandlegal.in
+                    </a>
+                </p>
+                <!-- Font Awesome CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+                <!-- Landline Number -->
+                <p>
+                    <i class="fas fa-phone" style="color: #a68a64; margin-right: 8px;"></i>
+                    <a href="tel:+911145272735" style="color: #004aad; text-decoration: none;">
+                        +91 11 45 272 735
+                    </a>
+                </p>
+
+                <!-- Mobile Number -->
+                <p>
+                    <i class="fas fa-mobile-alt" style="color: #a68a64; margin-right: 8px;"></i>
+                    <a href="tel:+917428840218" style="color: #004aad; text-decoration: none;">
+                        +91 74288 40218
+                    </a>
+                </p>
+
+            </div>
+
 
             <h5>For recruitment or internship opportunities:</h5>
-            <p>Email: <a href="mailto:hr@ampersandlegal.in" style="color: #004aad; text-decoration: none;">hr@ampersandlegal.in</a></p>
+            <p><i class="fas fa-envelope" style="color: #a68a64; margin-right: 8px;"></i> <a href="mailto:hr@ampersandlegal.in" style="color: #004aad; text-decoration: none;">hr@ampersandlegal.in</a></p>
         </div>
 
         <div style="text-align: center; margin-bottom: 40px;">

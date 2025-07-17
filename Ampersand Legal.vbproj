@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\AttorneysController.vb" />
+    <Compile Include="Controllers\BlogsController.vb" />
     <Compile Include="Controllers\ContactController.vb" />
     <Compile Include="Controllers\PracticeAreasController.vb" />
     <Compile Include="Global.asax.vb">
@@ -194,8 +195,10 @@
     <Content Include="Content\Images\family-law.jpg" />
     <Content Include="Content\Images\law-firm-hero.jpg" />
     <Content Include="Content\Images\law-books.jpg" />
-    <Content Include="Content\Images\Logo.jpeg" />
-    <Content Include="Content\Images\Logo1.jpg" />
+    <Content Include="Content\Images\linkedin.png" />
+    <Content Include="Content\Images\LogoWhite.png" />
+    <Content Include="Content\Images\LogoBlack.png" />
+    <Content Include="Content\Images\whatsapp.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -441,6 +444,7 @@
     <Content Include="Views\PracticeAreas\Index.vbhtml" />
     <Content Include="Views\Attorneys\Index.vbhtml" />
     <Content Include="Views\Contact\Index.vbhtml" />
+    <Content Include="Views\Blogs\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
