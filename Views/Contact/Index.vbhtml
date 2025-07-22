@@ -20,12 +20,12 @@ End Code
                 <i class="fas fa-map-marker-alt" style="color: #a68a64; margin-right: 8px;"></i>
                 <span style="color: #004aad;">
                     A - 47, Kailash Colony,<br />
-                      New Delhi - 110048, India
+                    New Delhi - 110048, India
                 </span>
             </p>
 
 
-            <h5>For general queries:</h5>           
+            <h5>For general queries:</h5>
             <!-- Make sure to include Font Awesome in your <head> -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <!-- Contact Info with Icons -->
@@ -69,7 +69,7 @@ End Code
         </div>
 
         <div id="google-form-container" class="hidden" style="margin-bottom: 40px;">
-            <iframe src="https://forms.gle/y4MG2unYiPpjJpWK9" width="100%" height="600px" frameborder="0" style="border-radius: 8px;"></iframe>
+            <iframe src="https://forms.gle/jUBLZrawzNjmeN2f6" width="100%" height="600px" frameborder="0" style="border-radius: 8px;"></iframe>
         </div>
 
         <div style="text-align: center;">
