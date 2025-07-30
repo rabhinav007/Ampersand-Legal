@@ -117,12 +117,12 @@ End Code
                 text-transform: lowercase;
             }
 
-        footer.custom-footer {
+            footer.custom-footer {
             background-color: /*#2c2c2c;*/ #737373;
             color: #f5f5f5;
             padding: 40px 0;
             font-size: 15px;
-        }
+             }
 
             footer.custom-footer a {
                 color: #d4af37;
@@ -235,6 +235,23 @@ End Code
                 width: 20px;
                 height: 20px;
             }
+        footer.custom-footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+            footer.custom-footer a:hover {
+                text-decoration: underline;
+                color: #f7d87c;
+            }
+
+            footer.custom-footer a.active-link {
+                color: #a68a64 !important;
+                text-decoration: underline;
+                font-weight: bold;
+            }
 
 
     </style>
@@ -344,11 +361,30 @@ End Code
                 <div class="col-md-3 mb-3 text-md-end text-start">
                     <div class="mb-2">
                         @*<a href="@Url.Action("Index", "Home")">home</a><br />*@
-                        <a href="@Url.Action("About", "Home")" ; style="color:white;">about</a><br />
-                        <a href="@Url.Action("Index", "PracticeAreas")" ; style="color:white;">expertise</a><br />
-                        <a href="@Url.Action("Index", "Attorneys")" ; style="color:white;">people</a><br />
-                        <a href="@Url.Action("Index", "Blogs")" ; style="color:white;">blogs</a><br />
-                        <a href="@Url.Action("Index", "Contact")" ; style="color:white;">contact</a>
+                        @Code
+                            Dim currentController = ViewContext.RouteData.Values("controller").ToString().ToLower()
+                            Dim currentAction = ViewContext.RouteData.Values("action").ToString().ToLower()
+                        End Code
+
+                        <div class="col-md-3 mb-3 text-md-end text-start">
+                            <div class="mb-2">
+                                <a href="@Url.Action("About", "Home")"
+                                   class="@(If(currentController = "home" And currentAction = "about", "active-link", ""))">about</a><br />
+
+                                <a href="@Url.Action("Index", "PracticeAreas")"
+                                   class="@(If(currentController = "practiceareas", "active-link", ""))">expertise</a><br />
+
+                                <a href="@Url.Action("Index", "Attorneys")"
+                                   class="@(If(currentController = "attorneys", "active-link", ""))">people</a><br />
+
+                                <a href="@Url.Action("Index", "Blogs")"
+                                   class="@(If(currentController = "blogs", "active-link", ""))">blogs</a><br />
+
+                                <a href="@Url.Action("Index", "Contact")"
+                                   class="@(If(currentController = "contact", "active-link", ""))">contact</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -381,11 +417,11 @@ End Code
                 Ampersand Legal advises against using the communication platform provided on this website for the exchange of confidential, business, or politically sensitive information. Users are requested to use their judgment and exchange any such information solely at their own risk.
             </p>
 
-            <div style="text-align: center; margin-top: 30px;">
-                <button id="acceptDisclaimer" style="padding: 10px 30px; font-size: 16px; background-color: #4a4a4a; border: none; border-radius: 5px; color: white; margin-right: 20px;">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+                <button id="acceptDisclaimer" style="padding: 10px 30px; font-size: 16px; background-color: #4a4a4a; border: none; border-radius: 5px; color: white; min-width: 120px;">
                     Accept
                 </button>
-                <button onclick="window.location.href='https://www.google.com';" style="padding: 10px 30px; font-size: 16px; background-color: #7a7a7a; border: none; border-radius: 5px; color: white;">
+                <button onclick="window.location.href='https://www.google.com';" style="padding: 10px 30px; font-size: 16px; background-color: #7a7a7a; border: none; border-radius: 5px; color: white; min-width: 120px;">
                     Decline
                 </button>
             </div>

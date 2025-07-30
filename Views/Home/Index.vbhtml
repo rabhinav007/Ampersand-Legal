@@ -50,7 +50,7 @@ End Code
             <h2 style="font-size: 28px; font-weight: 600; margin-bottom: 15px;">
                 <span style="color: #a68a64; font-family: 'Yeseva One', serif;">About Ampersand Legal</span>
             </h2>
-            <p style="color: #3f3f3f; font-size: 16px; line-height: 1.7;">
+            <p style="color: #4b433f; font-size: 18px; line-height: 1.7; font-family: 'Yeseva One' ">
                 With decades of experience, our firm has successfully represented thousands of clients in complex legal matters.<br />
                 We are committed to providing strategic and results-driven legal solutions.
             </p>

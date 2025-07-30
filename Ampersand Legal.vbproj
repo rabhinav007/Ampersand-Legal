@@ -439,6 +439,9 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="sitemap.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Home\Practice.vbhtml" />
     <Content Include="Views\Home\Attorneys.vbhtml" />
     <Content Include="Views\PracticeAreas\Index.vbhtml" />
