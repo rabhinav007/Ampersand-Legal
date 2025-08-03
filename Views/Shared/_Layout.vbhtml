@@ -5,6 +5,25 @@ End Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Title and Meta -->
+    <meta name="description" content="Ampersand Legal is a premier law firm specializing in Civil, Criminal, Corporate, and ADR legal services across India.">
+    <meta name="keywords" content="Ampersand Legal, civil lawyer, corporate lawyer, criminal lawyer, law firm Delhi, arbitration lawyer , lawyer near me , advocates near me , best lawyers in delhi">
+    <meta name="author" content="Ampersand Legal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Ampersand Legal – Premier Law Firm in India" />
+    <meta property="og:description" content="We provide expert legal counsel in civil, corporate, and criminal law." />
+    <meta property="og:url" content="https://www.ampersandlegal.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.ampersandlegal.in/content/images/LogoBlack.jpg" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.ampersandlegal.in/" />
+
+
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewData("Title") - Ampersand Legal</title>
@@ -13,7 +32,7 @@ End Code
 
     <style>
         .navbar-custom {
-            background-color: /*#2c2c2c; */#737373;
+            background-color: /*#2c2c2c; */ #737373;
         }
 
             .navbar-custom .navbar-brand,
@@ -117,12 +136,12 @@ End Code
                 text-transform: lowercase;
             }
 
-            footer.custom-footer {
+        footer.custom-footer {
             background-color: /*#2c2c2c;*/ #737373;
             color: #f5f5f5;
             padding: 40px 0;
             font-size: 15px;
-             }
+        }
 
             footer.custom-footer a {
                 color: #d4af37;
@@ -202,6 +221,7 @@ End Code
                 transform: perspective(500px) rotateX(0deg) scale(1.05);
                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
             }
+
         .hover-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: #fdfdfd;
@@ -235,6 +255,7 @@ End Code
                 width: 20px;
                 height: 20px;
             }
+
         footer.custom-footer a {
             color: white;
             text-decoration: none;
@@ -252,8 +273,6 @@ End Code
                 text-decoration: underline;
                 font-weight: bold;
             }
-
-
     </style>
 </head>
 <body>

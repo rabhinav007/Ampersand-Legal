@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "home"
+    ViewData("Title") = "Home"
 End Code
 
 <style>

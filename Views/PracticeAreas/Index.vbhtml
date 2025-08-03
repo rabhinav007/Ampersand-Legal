@@ -1,4 +1,4 @@
-﻿@Code ViewData("Title") = "Practice Areas" End Code
+﻿@Code ViewData("Title") = "Expertise" End Code
 
 <div class="container py-5" style="max-width: 1140px; background-color: #f8f8f8;">
     <h1 style="text-align: center; margin-bottom: 30px;color: #a68a64; font-weight: 700;">Expertise</h1>
